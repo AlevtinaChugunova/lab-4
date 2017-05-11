@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <cstring>
 
 char nibble_to_hex (uint8_t i){
 char c;
@@ -40,7 +40,46 @@ void print_in_hex(const void* data, size_t size){
     }
 
 };
+
+
 int main() {
+    struct student {
+    char name[17];
+    size_t year;
+    double sr;
+    uint32_t sex;
+    int count;
+    student* batya;
+    }s[3];
+
+   strcpy (s[0].name, "Olya");
+   s[0].year = 2016;
+    s[0].sr = 4.5;
+    s[0].sex = 0;
+    s[0].count = 0;
+    
+
+    strcpy (s[1].name, "Tolya");
+    s[1].year = 2016;
+    s[1].sr = 4.7;
+    s[1].sex = 1;
+    s[1].count = 0;
+    s[1].batya = &s[0];
+
+    strcpy (s[2].name, "Sergey");
+    s[2].year = 2016;
+    s[2].sr = 4.8;
+    s[2].sex = 1;
+    s[2].count = 0;
+    s[2].batya = &s[0];
+
+    strcpy (s[3].name, "Alya");
+    s[3].year = 2016;
+    s[3].sr = 5;
+    s[3].sex = 0;
+    s[3].count = 0;
+    s[3].batya = &s[0];
+
     int n;
     std:: cin >> n;
     print_in_hex(&n, sizeof(n));
