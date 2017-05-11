@@ -29,10 +29,20 @@ void print_byte (uint8_t byte){
     uint8_t high = (byte & 0b11110000)>>4;
     std::cout << nibble_to_hex(high) << nibble_to_hex(low);
 }
+void print_in_hex(const void* data, size_t size){
 
+    auto p = reinterpret_cast <const uint8_t*> (data);
+    for (size_t i = 0; i< size; i++ )
+    {
+        print_byte(p[i]);
+        std:: cout<<" ";
+
+    }
+
+};
 int main() {
-    int i;
-    std::cin >> i;
-    print_byte(i);
+    int n;
+    std:: cin >> n;
+    print_in_hex(&n, sizeof(n));
     return 0;
 }
