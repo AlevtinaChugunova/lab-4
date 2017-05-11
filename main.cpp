@@ -80,6 +80,23 @@ int main() {
     s[3].count = 0;
     s[3].batya = &s[0];
 
+    std:: cout<<&s<<"\n";
+    std:: cout<<sizeof(&s)<<"\n";
+
+    std:: cout<<&s[0]<<"\n";
+    std:: cout<<sizeof(&s[0])<<"\n";
+    std:: cout<<&s[1]<<"\n";
+    std:: cout<<sizeof(&s[1])<<"\n";
+    std:: cout<<&s[2]<<"\n";
+    std:: cout<<sizeof(&s[2])<<"\n";
+    std:: cout<<&s[3]<<"\n";
+    std:: cout<<sizeof(&s[3])<<"\n";
+
+    print_in_hex (&s[1].name, sizeof(s[1].name)); std:: cout<<"\n";
+    print_in_hex (&s[1].year, sizeof(s[1].year));   std:: cout<<"\n";
+    print_in_hex (&s[1].sr, sizeof(s[1].sr));  std:: cout<<"\n";
+    print_in_hex (&s[1].count, sizeof(s[1].count));   std:: cout<<"\n";
+    print_in_hex (&s[1].batya, sizeof(s[1].batya));   std:: cout<<"\n";
     int n;
     std:: cin >> n;
     print_in_hex(&n, sizeof(n));
