@@ -57,7 +57,7 @@ int main() {
     s[0].sr = 4.5;
     s[0].sex = 0;
     s[0].count = 0;
-    
+    s[0].batya = nullptr;
 
     strcpy (s[1].name, "Tolya");
     s[1].year = 2016;
